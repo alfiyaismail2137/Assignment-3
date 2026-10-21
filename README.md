@@ -40,17 +40,17 @@ should be "Loss"; if the profit equals 0, the label should be "Break-Even"; and 
 profit is greater than 0, the label should be "Profit". 
 <br>Add Column-->Conditional Column-->New Column Name: Profit Status-->Give Column Name-->Operator-->Value-->Output values to IF and Else-->OK.
 
-### Merging Data (Joins): 
+#### Merging Data (Joins): 
 ● Merge the "List of Orders" and "Order Details" tables into a new single table named 
 "Orders Data" based on the "Order ID" relationship.
 <br>Merge Queries-->Select List of Orders-->Select Order ID-->Select Order Details as Second table-->Select LeftOuter(All from First,matching from Second)-->OK.
   Change Table mode and Select Columns to show-->OK .
 
-### Handling Missing Data & Duplicate Data: 
+#### Handling Missing Data & Duplicate Data: 
 ● Check for duplicate rows and define a strategy to handle duplicates.
 <br>Create Duplicate of Order Data-->Home-->GroupBy--> Select OrderID-->New Column: Count , Operation: Count Rows-->OK.The Table diaplays OrderID and their Count.If Count=1 represent unique Id. If Count equal to more than one represent table have duplicates.Select Home-->RemoveRows-->Remove Duplicates.In Table Duplicate Raws Removed.
 
-### Sorting and Filtering Data: 
+#### Sorting and Filtering Data: 
 ● In the ‘Orders Data’ table, utilize sorting and filtering techniques on columns like 
 Order Date, State or Category to analyze data based on specific criteria: 
 ◆ Sort the orders by Order Date in descending order to analyze recent trends.
@@ -60,7 +60,7 @@ Order Date, State or Category to analyze data based on specific criteria:
 regional analysis.
 <br>Location Column-->Filter-->Select Chennai,Tamilnadu-->OK.There have 8 raws, Sales in Tamilnadu.
 
-### Grouping and Aggregating Data: 
+#### Grouping and Aggregating Data: 
 ● Duplicate the “Order Details” table and calculate the count of each Order ID, average 
 profit by Category or total amount by Sub-Category. 
 <br>Create duplicate of Order Details table renamed as Order_Details_Dup.Home-->GroupBy-->Specify OrderId,Category,SubCategory columns to groupby and desired output in advance mode.Select New Column name, Operation,column for grouping.<br>Count-->Count of Rows.<br>Average Profit-->Average-->Profit column.<br>Total Amount-->Sum-->Amount column-->OK.
@@ -69,7 +69,7 @@ profit by Category or total amount by Sub-Category.
 Order Date.
 <br>Create duplicate of Sales Target Table renamed as Sales_Target_Dup.Home-->GroupBy-->Specify Month of Order Date in advance mode.Select New Column name, Operation, column as Total Target-->Sum-->Target-->OK.
 
-### Data Modeling: 
+#### Data Modeling: 
 ● Establish a relationship between the “List of Orders” and “Order Details” tables using 
 the ‘Order ID’ column. 
 <br>Drag 'Order ID' of List of Orders table to Order Details table 'Order ID.From Table: List of Orders:OrderID, To Table:Order Details:OrderID-->Cardinality:One to Many-->Cross Filter direction-->single-->Make this Realtionship Active.
